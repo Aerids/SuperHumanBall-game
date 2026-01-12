@@ -7,16 +7,10 @@ public class PlayerController : MonoBehaviour
 
     public int jumpHeight = 1;
 
-    public Transform groundCheck;
-    public float groundDistance = 0.25f;
-    public LayerMask groundLayer;
-    private bool isGrounded;
-
     void Update()
     {
-        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundLayer);
 
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             rb.linearVelocity = new Vector3(rb.linearVelocity.x, jumpHeight, rb.linearVelocity.x);
 
