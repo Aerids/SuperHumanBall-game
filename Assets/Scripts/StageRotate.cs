@@ -18,8 +18,8 @@ public class NewMonoBehaviourScript : MonoBehaviour
         if (Mathf.Abs(h) < inputDeadzone) h = 0f;
         if (Mathf.Abs(v) < inputDeadzone) v = 0f;
 
-        float targetX = -v * maxTiltDegrees;
-        float targetZ = h * maxTiltDegrees;
+        float targetX = v * maxTiltDegrees;
+        float targetZ = -h * maxTiltDegrees;
 
         currentX = Mathf.Lerp(currentX, targetX, 1f - Mathf.Exp(-tiltSpeed * Time.deltaTime));
         currentZ = Mathf.Lerp(currentZ, targetZ, 1f - Mathf.Exp(-tiltSpeed * Time.deltaTime));
