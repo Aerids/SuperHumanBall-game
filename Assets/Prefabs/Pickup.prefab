@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1499928967222833510}
   - component: {fileID: 3667830834720279936}
   - component: {fileID: 2158093131362385181}
+  - component: {fileID: 5971031977438894331}
   m_Layer: 0
   m_Name: Pickup
   m_TagString: Untagged
@@ -111,3 +112,16 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5971031977438894331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 763316278514901957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fca0919950120874a8e69b0ef7825b08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AmmoPickup
+  amount: 1

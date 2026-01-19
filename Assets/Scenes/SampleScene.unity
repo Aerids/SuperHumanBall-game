@@ -579,11 +579,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1c4f599c788bf04c8e33526738fed6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
-  maxTiltDegrees: 10
-  tiltSpeed: 4
-  inputDeadzone: 0.05
-  currentX: 0
-  currentZ: 0
 --- !u!65 &438233075
 BoxCollider:
   m_ObjectHideFlags: 0
