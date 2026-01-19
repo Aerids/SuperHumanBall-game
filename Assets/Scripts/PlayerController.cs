@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public float deceleration = 25f;
 
     public float jumpHeight = 6f;
+    private bool isGrounded;
 
     void Awake()
     {
@@ -25,10 +26,9 @@ public class PlayerController : MonoBehaviour
         Vector3 input = new Vector3(h, 0f, v);
         if (input.sqrMagnitude > 1f) input.Normalize();
 
-        // WORLD SPACE movement (not affected by player rotation)
         desiredVelocity = input * maxSpeed;
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             rb.linearVelocity = new Vector3(
                 rb.linearVelocity.x,
@@ -48,4 +48,15 @@ public class PlayerController : MonoBehaviour
 
         rb.linearVelocity = new Vector3(newHorizontal.x, vel.y, newHorizontal.z);
     }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        isGrounded = true;
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        isGrounded = false;
+    }
+
 }
