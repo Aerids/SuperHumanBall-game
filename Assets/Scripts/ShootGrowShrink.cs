@@ -20,7 +20,7 @@ public class PlayerGrowShoot : MonoBehaviour
     public KeyCode shootKey = KeyCode.Mouse0;
 
 
-    [Header("Optional")]
+    [Header("Mass Multiplier")]
     public bool autoUpdateMass = true;          
     public float baseMass = 1f;
     public float massPerItem = 0.25f;
